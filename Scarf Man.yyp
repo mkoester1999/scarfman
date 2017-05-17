@@ -55,6 +55,14 @@
             }
         },
         {
+            "Key": "126e58a9-823f-4f61-b1f5-22e55acdc318",
+            "Value": {
+                "id": "732270ff-9a7e-4258-a241-a82a1da55d76",
+                "resourcePath": "sprites\\bkr_hell1\\bkr_hell1.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "1a0a8fd4-f4b8-4886-ba79-e740b1e79b32",
             "Value": {
                 "id": "8b6a44c6-69f7-4e7d-9e20-33eff78aa950",
@@ -327,11 +335,11 @@
             }
         },
         {
-            "Key": "b5726562-f1d6-4342-9d3e-08d4314d9ffa",
+            "Key": "bc73b129-7f9d-4b2a-91bb-7a5b5afb823a",
             "Value": {
-                "id": "f8901c7d-24ac-44d3-8ac2-211cc05373fe",
-                "resourcePath": "views\\529fc52f-8ae9-49f6-9515-073e09f0b1c6-room.yy",
-                "resourceType": "GMFolder"
+                "id": "654f32f9-f220-4351-bc81-447954c77d5a",
+                "resourcePath": "rooms\\rm_hell1\\rm_hell1.yy",
+                "resourceType": "GMRoom"
             }
         },
         {
