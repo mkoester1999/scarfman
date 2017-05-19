@@ -126,12 +126,14 @@ if(place_meeting(x-1,y,obj_wall) && key_jump)
 	}
 
 
-if(place_meeting(x,y,obj_enemy))
+if(place_meeting(x,y,obj_enemy) && alarm[0] = -1)
 	{
+		inst = place_meeting(x,y,obj_enemy)
 		if(slide = false) || (slide && hsp < global.slideSpeed && hsp > (-1)*global.slideSpeed ) 
 		{
 		
 			health -=1;
+			alarm[0] = 60;
 		
 		
 		
@@ -139,7 +141,8 @@ if(place_meeting(x,y,obj_enemy))
 		}
 		else  
 		{
-			hsp = 5* -sign(hsp); 
+			
+			hsp += -sign(hsp) * enemy_knockback;
 			//other.scr_die();
 		}		
 		
@@ -165,5 +168,17 @@ if (y > room_height)
 	{
 		ScarfDie();
 	}
+	
+	//death
+	if(health <=0)
+	{
+	ScarfDie();
+	}
+	
+	
+	//parallax
+	
+var cam_x = camera_get_view_x(view_camera[0]);
+layer_x("Background", cam_x * .5);
 
 	

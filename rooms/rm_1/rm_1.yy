@@ -2884,8 +2884,8 @@
                     "name_with_no_file_rename": "inst_6FF985D4",
                     "objId": "1fda1cd2-5824-42ff-86af-0b295afca142",
                     "rotation": 0,
-                    "scaleX": 0.5,
-                    "scaleY": 0.5
+                    "scaleX": 1,
+                    "scaleY": 1
                 }
             ]
         },

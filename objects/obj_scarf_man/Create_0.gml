@@ -6,7 +6,7 @@ hsp = 0;
 vsp = 0;
 moveSpeed = 1.66;
 grav = .4
-jumpspeed = 4.8;
+jumpspeed = 6;
 
 
 image_xscale = 1
@@ -17,10 +17,11 @@ key_right = 0;
 moveLock = true;
 grounded = true;
 knockback = 20;
+enemy_knockback = 8;
 
 globalvar slide;
 slide = false;
-health = 1;
+health = 10;
 
 global.slideSpeed = 1.5
 slideFriction = 1.05

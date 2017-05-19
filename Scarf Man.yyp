@@ -335,11 +335,27 @@
             }
         },
         {
+            "Key": "ba607dd5-3dc5-41f1-af73-bca175586032",
+            "Value": {
+                "id": "da0ab260-a4ce-47c1-aab2-861493216e0b",
+                "resourcePath": "views\\ba607dd5-3dc5-41f1-af73-bca175586032.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "bc73b129-7f9d-4b2a-91bb-7a5b5afb823a",
             "Value": {
                 "id": "654f32f9-f220-4351-bc81-447954c77d5a",
                 "resourcePath": "rooms\\rm_hell1\\rm_hell1.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "c46e28aa-a4b2-4000-b61c-0a5e2e2ddddd",
+            "Value": {
+                "id": "c9923b24-dd51-4de3-9825-b3c7d6f98b2c",
+                "resourcePath": "scripts\\EnemyDamage\\EnemyDamage.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -399,6 +415,14 @@
             }
         },
         {
+            "Key": "dbab26a6-fe70-4b60-a674-bcd4b56140e5",
+            "Value": {
+                "id": "14d94045-ee7e-4620-9986-88111b992465",
+                "resourcePath": "objects\\obj_demon_guard\\obj_demon_guard.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "acdd691d-b212-47a5-945a-a718930c226f",
@@ -432,7 +456,8 @@
         }
     ],
     "script_order": [
-        "28fceaba-9ffc-4771-8c76-421390da698b"
+        "28fceaba-9ffc-4771-8c76-421390da698b",
+        "c46e28aa-a4b2-4000-b61c-0a5e2e2ddddd"
     ],
     "tutorial": ""
 }
