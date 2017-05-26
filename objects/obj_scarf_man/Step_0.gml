@@ -143,6 +143,7 @@ if(place_meeting(x,y,obj_enemy) && alarm[0] = -1)
 		{
 			
 			hsp += -sign(hsp) * enemy_knockback;
+			//instance_destroy(inst);
 			//other.scr_die();
 		}		
 		
@@ -181,4 +182,7 @@ if (y > room_height)
 var cam_x = camera_get_view_x(view_camera[0]);
 layer_x("Background", cam_x * .5);
 
-	
+	if(keyboard_check(vk_escape))
+	{
+	game_end();
+	}

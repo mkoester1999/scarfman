@@ -2468,7 +2468,7 @@
             "hport": 1080,
             "hspeed": -1,
             "hview": 256,
-            "inherit": true,
+            "inherit": false,
             "objId": "46815b3a-b632-41ec-ab0f-471c180a461d",
             "vborder": 64,
             "visible": true,
