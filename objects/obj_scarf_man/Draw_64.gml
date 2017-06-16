@@ -7,3 +7,4 @@ draw_set_color(c_red);
 draw_text(10,10,health);
 draw_set_color(c_blue);
 draw_text(10,25,hsp);
+

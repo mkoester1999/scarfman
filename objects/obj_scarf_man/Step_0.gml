@@ -4,8 +4,9 @@
 //Get the player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(vk_space);
+key_jump = keyboard_check_pressed(ord("Z"));
 key_down = keyboard_check(vk_down);
+key_grapple = keyboard_check_pressed(ord("X"))
  
 
 //React to inputs
@@ -173,7 +174,7 @@ if (y > room_height)
 	//death
 	if(health <=0)
 	{
-	ScarfDie();
+		ScarfDie();
 	}
 	
 	
@@ -184,5 +185,15 @@ layer_x("Background", cam_x * .5);
 
 	if(keyboard_check(vk_escape))
 	{
-	game_end();
+		game_end();
+	}
+	
+	
+	
+	//grapple
+if(key_grapple && instance_exists(obj_grapple) && distance_to_object(obj_grapple) < 200)
+	{
+		ScarfGrapple(instance_nearest(x,y,obj_grapple));
+		grapple = true;
+		grapple = false
 	}

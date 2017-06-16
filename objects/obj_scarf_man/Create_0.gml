@@ -26,3 +26,5 @@ health = 10;
 global.slideSpeed = 1.5
 slideFriction = 1.05
 normalFriction = 1.5
+grapple = false
+point = instance_nearest(x,y,obj_grapple);
