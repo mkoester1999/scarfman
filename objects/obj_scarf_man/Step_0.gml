@@ -33,12 +33,12 @@ hsp /=friction;
 
 
 //gravity
-if (vsp < 10) vsp += grav;
+if (vsp < 10) vsp += grav / deccel;
  
 if (place_meeting(x,y+1,obj_wall))
 	{
 		vsp = key_jump * -jumpspeed;
-	
+		side = 0;
 	}
 
  
@@ -63,6 +63,7 @@ if (place_meeting(x,y+vsp,obj_wall))
 			y += sign(vsp);
 		}
     vsp = 0;
+	side = 0;
 }
 y += vsp;
 
@@ -103,26 +104,27 @@ else if (!key_down  || !key_left || !key_right)
 	}
 
 //Wall Jumping
-if(place_meeting(x+1,y,obj_wall) && key_jump)
+if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale)
 	{
 		vsp = key_jump * -jumpspeed;
 		moveLock = false;
 	
 		hsp = -knockback;
 		moveLock = true;
+		side = image_xscale;
 	
 	}
 	
 
 
 	
-if(place_meeting(x-1,y,obj_wall) && key_jump)
+if(place_meeting(x-1,y,obj_wall) && key_jump && side != image_xscale)
 	{
 		vsp = key_jump * -jumpspeed;
 	
 	
 		hsp = knockback;
-	
+		side = image_xscale;
 	
 	}
 
@@ -195,5 +197,15 @@ if(key_grapple && instance_exists(obj_grapple) && distance_to_object(obj_grapple
 	{
 		ScarfGrapple(instance_nearest(x,y,obj_grapple));
 		grapple = true;
-		grapple = false
+		alarm[0] = 15;
 	}
+
+if(place_meeting(x+1,y,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall))
+{
+	DustParticles();
+	deccel = deccelAmount;
+	alarm[1] = 60;
+}
+else deccel = 1;
+
+depth = 101

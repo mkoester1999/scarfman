@@ -8,3 +8,8 @@ draw_text(10,10,health);
 draw_set_color(c_blue);
 draw_text(10,25,hsp);
 
+draw_set_color(c_orange);
+draw_text(10,40,image_xscale);
+
+draw_set_color(c_purple)
+draw_text(10,55,side);
