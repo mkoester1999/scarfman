@@ -30,7 +30,7 @@ grapple = false
 point = instance_nearest(x,y,obj_grapple);
 instance_create_depth(x,y,100,obj_scarf);
 slide = true;
-depth = 101
+depth = 99
 side = 0;
 deccel = 1;
 deccelAmount = 3

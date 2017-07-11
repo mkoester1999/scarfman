@@ -12,4 +12,12 @@ draw_set_color(c_orange);
 draw_text(10,40,image_xscale);
 
 draw_set_color(c_purple)
-draw_text(10,55,side);
+
+if(grounded)
+{
+draw_text(10,55,"true");
+}
+else
+{
+draw_text(10,55,"false");
+}

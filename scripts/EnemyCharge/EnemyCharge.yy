@@ -1,8 +1,8 @@
 {
-    "id": "f5887271-185f-40e7-9b1b-55ccd41a7e4e",
+    "id": "a3f4482e-51b1-4daa-9105-ec830e6074b6",
     "modelName": "GMScript",
     "mvc": "1.0",
-    "name": "FireParticles",
+    "name": "EnemyCharge",
     "IsCompatibility": false,
     "IsDnD": false
 }

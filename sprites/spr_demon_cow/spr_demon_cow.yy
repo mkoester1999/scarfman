@@ -2,16 +2,16 @@
     "id": "57674db2-7676-4410-b07e-85b731aa8794",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "spr_skull",
+    "name": "spr_demon_cow",
     "For3D": false,
     "HTile": false,
     "VTile": false,
-    "bbox_bottom": 53,
-    "bbox_left": 0,
-    "bbox_right": 42,
-    "bbox_top": 8,
+    "bbox_bottom": 63,
+    "bbox_left": 36,
+    "bbox_right": 117,
+    "bbox_top": 3,
     "bboxmode": 0,
-    "colkind": 1,
+    "colkind": 0,
     "coltolerance": 0,
     "frames": [
         {
@@ -61,7 +61,7 @@
     "swfPrecision": 2.525,
     "textureGroupId": "1225f6b0-ac20-43bd-a82e-be73fa0b6f4f",
     "type": 0,
-    "width": 64,
-    "xorig": 45,
-    "yorig": 38
+    "width": 128,
+    "xorig": 70,
+    "yorig": 31
 }

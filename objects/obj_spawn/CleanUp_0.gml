@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
-part_emitter_destroy(particle, emitter);
-part_type_destroy(type);
-part_system_destroy(particle);
+part_emitter_destroy(fireParticle, fireEmitter);
+part_type_destroy(fireType);
+part_system_destroy(fireParticle);

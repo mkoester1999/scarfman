@@ -6,7 +6,7 @@ key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
 key_jump = keyboard_check_pressed(ord("Z"));
 key_down = keyboard_check(vk_down);
-key_grapple = keyboard_check_pressed(ord("X"))
+key_grapple = keyboard_check_pressed(ord("X")) ;
  
 
 //React to inputs
@@ -64,7 +64,10 @@ if (place_meeting(x,y+vsp,obj_wall))
 		}
     vsp = 0;
 	side = 0;
+	
+	
 }
+
 y += vsp;
 
 
@@ -104,7 +107,7 @@ else if (!key_down  || !key_left || !key_right)
 	}
 
 //Wall Jumping
-if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale)
+if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale && grounded != true)
 	{
 		vsp = key_jump * -jumpspeed;
 		moveLock = false;
@@ -118,7 +121,7 @@ if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale)
 
 
 	
-if(place_meeting(x-1,y,obj_wall) && key_jump && side != image_xscale)
+if(place_meeting(x-1,y,obj_wall) && key_jump && side != image_xscale && grounded != true)
 	{
 		vsp = key_jump * -jumpspeed;
 	
@@ -200,7 +203,7 @@ if(key_grapple && instance_exists(obj_grapple) && distance_to_object(obj_grapple
 		alarm[0] = 15;
 	}
 
-if(place_meeting(x+1,y,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall))
+if(place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall))
 {
 	DustParticles();
 	deccel = deccelAmount;
@@ -208,4 +211,9 @@ if(place_meeting(x+1,y,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_mee
 }
 else deccel = 1;
 
-depth = 101
+//grounded
+if(place_meeting(x,y+1,obj_wall))
+{
+grounded = true;
+}
+else grounded = false;

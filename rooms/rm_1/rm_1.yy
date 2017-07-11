@@ -95,7 +95,8 @@
         "b3651e63-6584-4c66-98d6-3cb78e6d988d",
         "3714d7a9-c68c-48ab-8071-42bb4a82aee0",
         "e7a0212b-0c16-4b3c-afd7-548b5006208a",
-        "e035032e-739c-40e9-b110-694bbe7ba8b3"
+        "e035032e-739c-40e9-b110-694bbe7ba8b3",
+        "bde3d5cb-d912-45e9-b3e5-22acce2a0079"
     ],
     "layers": [
         {
@@ -3011,6 +3012,30 @@
                     "rotation": 0,
                     "scaleX": 1,
                     "scaleY": 1
+                },
+                {
+                    "id": "bde3d5cb-d912-45e9-b3e5-22acce2a0079",
+                    "modelName": "GMRInstance",
+                    "mvc": "1.0",
+                    "ignore": false,
+                    "inheritItemSettings": false,
+                    "m_originalParentID": "00000000-0000-0000-0000-000000000000",
+                    "m_serialiseFrozen": false,
+                    "name": "inst_2505CB0A",
+                    "x": 176,
+                    "y": 144,
+                    "IsDnD": false,
+                    "colour": {
+                        "Value": 4294967295
+                    },
+                    "creationCodeFile": "",
+                    "creationCodeType": "",
+                    "inheritCode": false,
+                    "name_with_no_file_rename": "inst_2505CB0A",
+                    "objId": "9f8ccfcc-4665-4a9e-82d5-7cac47ea7905",
+                    "rotation": 0,
+                    "scaleX": 0.5,
+                    "scaleY": 0.5
                 }
             ]
         },
@@ -3143,8 +3168,8 @@
                     2147483648,
                     2147483648,
                     2147483648,
-                    2147483648,
-                    2147483648,
+                    0,
+                    0,
                     2147483648,
                     2147483648,
                     2147483648,
@@ -3176,14 +3201,14 @@
                     2147483648,
                     2147483648,
                     2147483648,
-                    2147483648,
+                    0,
                     2147483648,
                     0,
                     0,
                     2147483648,
                     2147483648,
                     2147483648,
-                    2147483648,
+                    0,
                     2147483648,
                     0,
                     2147483648,

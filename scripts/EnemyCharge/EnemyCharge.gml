@@ -1,0 +1,2 @@
+point = argument0
+
