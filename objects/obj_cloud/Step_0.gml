@@ -1,7 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
-enemyHealth = 1
-grav = .4
-vsp = 0;
-speeds = 2
-dir = 1;
+x += hsp;
+
+if(x > room_width + sprite_width / 2)
+{
+	x = 0 - sprite_width ;
+}

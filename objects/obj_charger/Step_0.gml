@@ -21,7 +21,7 @@ if(alarm[1] != -1)
 		
 		
 		}
-		hsp = 0; alarm[0] = 240;
+		hsp = 0; alarm[0] = 240; 
 	}
 	else x += hsp;
 	x+=hsp;
@@ -48,4 +48,10 @@ y += vsp;
 if(dir != 0)
 {
 image_xscale = dir/2;
+}
+
+//death
+if( y>room_height)
+{
+instance_destroy();
 }
