@@ -33,7 +33,7 @@ hsp /=friction;
 
 
 //gravity
-if (vsp < 10) vsp += grav / deccel;
+if (vsp < 10) vsp += grav ;
  
 if (place_meeting(x,y+1,obj_wall))
 	{
@@ -106,10 +106,19 @@ else if (!key_down  || !key_left || !key_right)
 		image_angle = 0;	
 	}
 
-//Wall Jumping
-if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale && grounded != true)
+
+//Wall sliding and Wall Jumping
+if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall)) && (key_left = -1 || key_right = 1) )
+{
+	
+
+	DustParticles();
+	deccel = deccelAmount;
+	alarm[1] = 60;
+	
+	if(key_jump && image_xscale  = 1 && side != image_xscale && grounded != true)
 	{
-		vsp = key_jump * -jumpspeed;
+		vsp = key_jump * -jumpspeed *deccel;
 		moveLock = false;
 	
 		hsp = -knockback;
@@ -121,15 +130,22 @@ if(place_meeting(x+1,y,obj_wall) && key_jump && side != image_xscale && grounded
 
 
 	
-if(place_meeting(x-1,y,obj_wall) && key_jump && side != image_xscale && grounded != true)
+	if(key_jump && image_xscale = -1 && side != image_xscale && grounded != true)
 	{
-		vsp = key_jump * -jumpspeed;
+		vsp = key_jump * -jumpspeed * deccel;
 	
 	
 		hsp = knockback;
 		side = image_xscale;
 	
 	}
+	 vsp /= deccel;
+	
+	
+}
+else deccel = 1;
+
+
 
 
 if(place_meeting(x,y,obj_enemy) && alarm[0] = -1)
@@ -196,20 +212,16 @@ layer_x("Background", cam_x * .5);
 	
 	
 	//grapple
-if(key_grapple && instance_exists(obj_grapple) && distance_to_object(obj_grapple) < 200)
+if(key_grapple && instance_exists(obj_grapple) && cos(45) * distance_to_object(obj_grapple) < grappleDistance && alarm[2] = -1)
 	{
 		ScarfGrapple(instance_nearest(x,y,obj_grapple));
 		grapple = true;
 		alarm[0] = 15;
+		alarm[2] = 30
 	}
 
-if(place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall))
-{
-	DustParticles();
-	deccel = deccelAmount;
-	alarm[1] = 60;
-}
-else deccel = 1;
+
+
 
 //grounded
 if(place_meeting(x,y+1,obj_wall))

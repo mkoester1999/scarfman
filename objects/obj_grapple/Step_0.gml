@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 
-if(distance_to_object(obj_scarf_man) < 200)
+if(cos(45) * distance_to_object(obj_scarf_man) < obj_scarf_man.grappleDistance)
 {
 	image_index = 1;
 }

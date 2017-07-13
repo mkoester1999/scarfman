@@ -27,10 +27,11 @@ global.slideSpeed = 1.5
 slideFriction = 1.05
 normalFriction = 1.5
 grapple = false
+grappleDistance = 100
 point = instance_nearest(x,y,obj_grapple);
 instance_create_depth(x,y,100,obj_scarf);
 slide = true;
 depth = 99
 side = 0;
 deccel = 1;
-deccelAmount = 3
+deccelAmount = 2
