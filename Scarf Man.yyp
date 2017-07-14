@@ -167,6 +167,22 @@
             }
         },
         {
+            "Key": "3373189a-d811-446a-9235-8b5b28b6281c",
+            "Value": {
+                "id": "81f962bb-3268-4ccc-8164-9ed46784440a",
+                "resourcePath": "sprites\\spr_scarf_man_wall_slide\\spr_scarf_man_wall_slide.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "3633e841-a56a-4d49-ad2d-de7b7c8b0407",
+            "Value": {
+                "id": "0574ceb3-915f-451c-87d3-1439254ca2ee",
+                "resourcePath": "sprites\\spr_scarf_jump\\spr_scarf_jump.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3acdbd4a-5593-40de-b981-f2fbbaab6833",
             "Value": {
                 "id": "070b1331-065c-4b3c-8f2d-17e7696ec6fa",
@@ -659,6 +675,14 @@
             "Value": {
                 "id": "645dab1c-4558-4f80-9b69-b79dd4fdaed5",
                 "resourcePath": "sprites\\spr_blank_scarf\\spr_blank_scarf.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "fc4d2fea-61a2-4014-a6ea-fdb31c010bc6",
+            "Value": {
+                "id": "ee4030d5-a992-4ac4-99c6-6e1ee82df208",
+                "resourcePath": "sprites\\spr_scarf_fall\\spr_scarf_fall.yy",
                 "resourceType": "GMSprite"
             }
         },

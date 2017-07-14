@@ -74,24 +74,24 @@ y += vsp;
 //image flipping
 if (key_left = -1 && !key_down)
 	{
-		image_xscale = -1
+		image_xscale = -1;
 	
 	}
 	
 if (key_right = 1)
 	{
-		image_xscale = 1
+		image_xscale = 1;
 	
 	}
 
 //Sprite Changing
-if(key_down && place_meeting(x,y+1,obj_wall))
+if(key_down && grounded)
 	{
 		sprite_index = spr_scarf_man_slide;
 	
 	}
 
-else if(key_left = -1)|| (key_right = 1)
+else if((key_left = -1 || key_right = 1) && deccel = 1)
 	{
 		sprite_index = spr_scarf_man_run;
 		image_angle = 0;
@@ -100,7 +100,7 @@ else if(key_left = -1)|| (key_right = 1)
 	
 
 	
-else if (!key_down  || !key_left || !key_right)
+else if ((!key_down  || !key_left || !key_right) && deccel = 1)
 	{
 		sprite_index = spr_scarf_man_idle;
 		image_angle = 0;	
@@ -115,6 +115,7 @@ if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_mee
 	DustParticles();
 	deccel = deccelAmount;
 	alarm[1] = 60;
+	sprite_index = spr_scarf_man_wall_slide;
 	
 	if(key_jump && image_xscale  = 1 && side != image_xscale && grounded != true)
 	{
@@ -139,6 +140,7 @@ if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_mee
 		side = image_xscale;
 	
 	}
+		
 	 vsp /= deccel;
 	
 	

@@ -39,8 +39,8 @@
             "name": "foreground_tiles",
             "userdefined_depth": false,
             "visible": true,
-            "prev_tileheight": 0,
-            "prev_tilewidth": 0,
+            "prev_tileheight": 32,
+            "prev_tilewidth": 32,
             "tiles": {
                 "SerialiseData": null,
                 "SerialiseHeight": 24,
