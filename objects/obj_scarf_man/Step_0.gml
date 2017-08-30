@@ -4,7 +4,7 @@
 //Get the player's input
 key_right = keyboard_check(vk_right);
 key_left = -keyboard_check(vk_left);
-key_jump = keyboard_check_pressed(ord("Z"));
+key_jump = keyboard_check_pressed(vk_up);
 key_down = keyboard_check(vk_down);
 key_grapple = keyboard_check_pressed(ord("X")) ;
  
@@ -78,7 +78,7 @@ if (key_left = -1 && !key_down)
 	
 	}
 	
-if (key_right = 1)
+if (key_right = 1 && ! key_down)
 	{
 		image_xscale = 1;
 	
@@ -108,7 +108,7 @@ else if ((!key_down  || !key_left || !key_right) && deccel = 1)
 
 
 //Wall sliding and Wall Jumping
-if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall)) && (key_left = -1 || key_right = 1) )
+if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall)) && (key_left = -1 || key_right = 1) && alarm[3] = -1 )
 {
 	
 
@@ -149,10 +149,10 @@ else deccel = 1;
 
 
 
-
+//enemy encounter
 if(place_meeting(x,y,obj_enemy) && alarm[0] = -1)
 	{
-		inst = place_meeting(x,y,obj_enemy)
+		inst = instance_place(x,y,obj_enemy)
 		if(slide = false) || (slide && hsp < global.slideSpeed && hsp > (-1)*global.slideSpeed ) 
 		{
 		
@@ -165,10 +165,15 @@ if(place_meeting(x,y,obj_enemy) && alarm[0] = -1)
 		}
 		else  
 		{
+			if(alarm[5] = -1)
+			{
+			inst.enemyHealth -= damage;
+			alarm[5] = 3
+			}
+			
 			
 			hsp += -sign(hsp) * enemy_knockback;
-			//instance_destroy(inst);
-			//other.scr_die();
+		
 		}		
 		
 		
@@ -229,5 +234,15 @@ if(key_grapple && instance_exists(obj_grapple) && cos(45) * distance_to_object(o
 if(place_meeting(x,y+1,obj_wall))
 {
 grounded = true;
+alarm[3] = 15
 }
 else grounded = false;
+
+
+//spike damage
+if(place_meeting(x + image_xscale,y,obj_spikes) && (hsp >= 3 || hsp <= -3))
+{
+	health -= 1;
+	hsp -= image_xscale * 5;
+}
+

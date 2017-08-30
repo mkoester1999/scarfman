@@ -1,0 +1,1 @@
+//Dialog("This is a string",0.5,300,300)

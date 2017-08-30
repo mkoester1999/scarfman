@@ -6,7 +6,7 @@ draw_set_color(c_red);
 //draw_text(view_xport +10,view_yport-10,health);
 draw_text(10,10,health);
 draw_set_color(c_blue);
-draw_text(10,25,"deccel: " + string(deccel));
+draw_text(10,25,"hsp: " + string(hsp));
 
 
 draw_set_color(c_orange);

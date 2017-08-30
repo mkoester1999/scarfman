@@ -1,6 +1,7 @@
-if(place_meeting(x+1,y,obj_scarf_man) && abs(obj_scarf_man.hsp) >global.slideSpeed && slide == true /*&& alarm[0] = -1*/)
+if(enemyHealth <=0)
 {
+	BloodParticles();
+	//remember to make a particle destroying system
 	instance_destroy();
-
+	
 }
-

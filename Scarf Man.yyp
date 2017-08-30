@@ -95,6 +95,14 @@
             }
         },
         {
+            "Key": "1837f053-d2f0-4c15-b4e4-f4408614c667",
+            "Value": {
+                "id": "aedf7bd2-69fa-42a4-b760-911b2b752012",
+                "resourcePath": "views\\1837f053-d2f0-4c15-b4e4-f4408614c667.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "1a0a8fd4-f4b8-4886-ba79-e740b1e79b32",
             "Value": {
                 "id": "8b6a44c6-69f7-4e7d-9e20-33eff78aa950",
@@ -191,6 +199,14 @@
             }
         },
         {
+            "Key": "3c6dba43-ad7c-405d-aec7-2717021b225a",
+            "Value": {
+                "id": "c6d74d42-f6aa-46c7-a158-b1f83896d80f",
+                "resourcePath": "scripts\\Dialog\\Dialog.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "3fca2ea4-53a3-4be3-ac14-04b0e18f5901",
             "Value": {
                 "id": "3b6dab97-deeb-49c7-a801-1fb60ca7eb7e",
@@ -255,6 +271,22 @@
             }
         },
         {
+            "Key": "58a253a7-bed3-41bd-af6b-f97b645185d2",
+            "Value": {
+                "id": "7f8a8550-bde1-4eeb-bce7-b898671a724f",
+                "resourcePath": "scripts\\ParticleSystemsCreate\\ParticleSystemsCreate.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "59cd498a-aafa-4a84-8def-566551890687",
+            "Value": {
+                "id": "e5a037a4-ff2c-4270-8b69-36365775950a",
+                "resourcePath": "sprites\\spr_scarf_man_run\\spr_scarf_man_run.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "5ea4ee62-6ad9-415b-9d59-1c9d726cb029",
             "Value": {
                 "id": "f350656a-3e62-4bc6-abb7-5be064ba9302",
@@ -311,11 +343,27 @@
             }
         },
         {
+            "Key": "6ddec2da-0aaf-40c8-9899-3cc446c15d27",
+            "Value": {
+                "id": "c931968d-7e72-412c-9638-40deb26c0eed",
+                "resourcePath": "sprites\\spr_squidthing\\spr_squidthing.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "6e94182a-0c2a-4215-bd42-9245b7590a05",
             "Value": {
                 "id": "c445e9d0-37d2-4b57-bc82-d444c02c2592",
                 "resourcePath": "objects\\obj_draw\\obj_draw.yy",
                 "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "6eccb910-ba1e-421d-a10f-6bc8c4dc1aa3",
+            "Value": {
+                "id": "42d7bbed-1105-4ded-bacf-e3ff5d3c3f7d",
+                "resourcePath": "fonts\\fnt_dialog\\fnt_dialog.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -338,7 +386,7 @@
             "Key": "7a15051c-c500-4b84-9943-fc70d34660ee",
             "Value": {
                 "id": "3197d106-ee3a-437a-a2d5-27810dcfa39e",
-                "resourcePath": "sprites\\spr_scarf_man_run\\spr_scarf_man_run.yy",
+                "resourcePath": "sprites\\spr_scarf_man_run2\\spr_scarf_man_run2.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -348,6 +396,14 @@
                 "id": "45b65a8e-601e-485e-9331-606521c53c8d",
                 "resourcePath": "views\\1093b5fc-7f09-4ef3-998d-3c3482a9e94c-room.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "84734e36-95f1-4a50-840b-96c62fad4f05",
+            "Value": {
+                "id": "e3aaf89b-a0a4-4b8c-9081-a1afd4f7f0e4",
+                "resourcePath": "objects\\obj_text\\obj_text.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -372,6 +428,14 @@
                 "id": "bc30dfc9-4711-4bc0-821e-1075053423e4",
                 "resourcePath": "views\\87425391-a6c8-4964-8259-0bc2268071c1.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "8a353595-4acb-41c7-b68b-5efc312972ea",
+            "Value": {
+                "id": "78a8ca07-ffcd-47a7-988f-c4a9d709ae47",
+                "resourcePath": "scripts\\BloodParticles\\BloodParticles.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -559,6 +623,14 @@
             }
         },
         {
+            "Key": "cc9fc02a-b77e-4daf-9c68-756177bf3973",
+            "Value": {
+                "id": "9db6706c-a071-4473-af5f-48c0d524067c",
+                "resourcePath": "scripts\\Physics\\Physics.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "cf3d2a22-379c-4050-9ed7-4f296d4c8689",
             "Value": {
                 "id": "fd9efd5a-5ad6-44fa-bde8-9d4a561f7c28",
@@ -639,6 +711,14 @@
             }
         },
         {
+            "Key": "f0933d20-7975-4194-aecf-be36fd4b718b",
+            "Value": {
+                "id": "2ae7bbeb-b580-41c1-8e41-44bc2b1cb2a5",
+                "resourcePath": "objects\\obj_squidthing\\obj_squidthing.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "f418569b-3bdd-4706-a0e4-364317f54032",
             "Value": {
                 "id": "acdd691d-b212-47a5-945a-a718930c226f",
@@ -698,10 +778,14 @@
     "script_order": [
         "9231791d-de9b-49a2-bae2-a2dbd293b70f",
         "28fceaba-9ffc-4771-8c76-421390da698b",
-        "a3f4482e-51b1-4daa-9105-ec830e6074b6",
         "c46e28aa-a4b2-4000-b61c-0a5e2e2ddddd",
+        "a3f4482e-51b1-4daa-9105-ec830e6074b6",
         "10385753-f733-40fb-bc59-188ffcca4237",
-        "f5887271-185f-40e7-9b1b-55ccd41a7e4e"
+        "f5887271-185f-40e7-9b1b-55ccd41a7e4e",
+        "8a353595-4acb-41c7-b68b-5efc312972ea",
+        "58a253a7-bed3-41bd-af6b-f97b645185d2",
+        "cc9fc02a-b77e-4daf-9c68-756177bf3973",
+        "3c6dba43-ad7c-405d-aec7-2717021b225a"
     ],
     "tutorial": ""
 }

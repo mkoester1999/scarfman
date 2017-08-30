@@ -4,7 +4,7 @@ point = obj_scarf_man;
 
 if(distance_to_object(point) < 300 && point.grounded == true && !collision_line(x,y,point.x,point.y,obj_wall,false,false) && alarm[0] = -1)
 {
-	alarm[0] = 240;
+	alarm[0] = 180;
 	alarm[1] = 120
 	dir = sign(point.x - x)
 	hsp = dir * speeds;
@@ -56,3 +56,13 @@ if( y>room_height)
 instance_destroy();
 }
 
+if(hsp != 0)
+{
+	image_speed = 15;
+}
+else 
+{
+	image_speed = 0; 
+	image_index = 0;
+
+}
