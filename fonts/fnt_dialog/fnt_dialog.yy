@@ -1,14 +1,16 @@
 {
     "id": "6eccb910-ba1e-421d-a10f-6bc8c4dc1aa3",
     "modelName": "GMFont",
-    "mvc": "1.0",
+    "mvc": "1.1",
     "name": "fnt_dialog",
     "AntiAlias": 0,
     "TTFName": "",
+    "ascenderOffset": 0,
     "bold": true,
     "charset": 0,
     "first": 0,
     "fontName": "TI Uni",
+    "glyphOperations": 0,
     "glyphs": [
         {
             "Key": 32,
@@ -1436,13 +1438,16 @@
             }
         }
     ],
-    "image": null,
+    "hinting": 0,
     "includeTTF": false,
+    "interpreter": 0,
     "italic": false,
     "kerningPairs": [
         
     ],
     "last": 0,
+    "maintainGms1Font": false,
+    "pointRounding": 0,
     "ranges": [
         {
             "x": 32,

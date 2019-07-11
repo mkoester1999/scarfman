@@ -8,38 +8,26 @@ key_jump = keyboard_check_pressed(vk_up);
 key_down = keyboard_check(vk_down);
 key_grapple = keyboard_check_pressed(ord("X")) ;
  
+//TODO: set up state machines
+/*
+in what state machine:
+normal: reacting to inputs, gravity, wall jumping & sliding
+grapple: grapple code, mostly handled in script that is called. 
+TODO: Move code to scripts
+*/
 
-//React to inputs
-move = key_left + key_right;
-if(!key_down || !place_meeting(x,y+1,obj_wall))hsp += move * moveSpeed;
-
-
-//sliding
-
-if(place_meeting(x,y+1,obj_wall) && key_down = true)
+switch(player_state)
+{
+	case p_state.normal:
 	{
-		friction = slideFriction
-		slide = true;
-	}
-else
-	{ 
-		friction = normalFriction; 
-		slide = false;
-	}
-
-
-//friction 
-hsp /=friction;
-
-
-//gravity
-if (vsp < 10) vsp += grav ;
- 
-if (place_meeting(x,y+1,obj_wall))
+		scarfNormal()
+	}break;
+	
+	case p_state.grapple:
 	{
-		vsp = key_jump * -jumpspeed;
-		side = 0;
-	}
+		ScarfGrapple(instance_nearest(x,y,obj_grapple));
+	}break;
+}
 
  
 //Horizontal Collision
@@ -51,6 +39,11 @@ if (place_meeting(x+hsp,y,obj_wall))
 		
 		
 		}
+	if(player_state = p_state.grapple)
+	{
+		rope_angle = point_direction(grapple_x,grapple_y,x,y)
+		rope_angle_velocity = 0;
+	}
 	hsp = 0;
 }
 x += hsp;
@@ -62,6 +55,11 @@ if (place_meeting(x,y+vsp,obj_wall))
 		{
 			y += sign(vsp);
 		}
+	if(player_state = p_state.grapple)
+	{
+		rope_angle = point_direction(grapple_x,grapple_y,x,y)
+		rope_angle_velocity = 0;
+	}
     vsp = 0;
 	side = 0;
 	
@@ -107,45 +105,7 @@ else if ((!key_down  || !key_left || !key_right) && deccel = 1)
 	}
 
 
-//Wall sliding and Wall Jumping
-if((place_meeting(x+1,y,obj_wall) && !place_meeting(x,y+1,obj_wall) || place_meeting(x-1,y,obj_wall) && ! place_meeting(x,y+1,obj_wall)) && (key_left = -1 || key_right = 1) && alarm[3] = -1 )
-{
-	
 
-	DustParticles();
-	deccel = deccelAmount;
-	alarm[1] = 60;
-	sprite_index = spr_scarf_man_wall_slide;
-	
-	if(key_jump && image_xscale  = 1 && side != image_xscale && grounded != true)
-	{
-		vsp = key_jump * -jumpspeed *deccel;
-		moveLock = false;
-	
-		hsp = -knockback;
-		moveLock = true;
-		side = image_xscale;
-	
-	}
-	
-
-
-	
-	if(key_jump && image_xscale = -1 && side != image_xscale && grounded != true)
-	{
-		vsp = key_jump * -jumpspeed * deccel;
-	
-	
-		hsp = knockback;
-		side = image_xscale;
-	
-	}
-		
-	 vsp /= deccel;
-	
-	
-}
-else deccel = 1;
 
 
 
@@ -218,14 +178,7 @@ layer_x("Background", cam_x * .5);
 	
 	
 	
-	//grapple
-if(key_grapple && instance_exists(obj_grapple) && cos(45) * distance_to_object(obj_grapple) < grappleDistance && alarm[2] = -1)
-	{
-		ScarfGrapple(instance_nearest(x,y,obj_grapple));
-		grapple = true;
-		alarm[0] = 15;
-		alarm[2] = 30
-	}
+
 
 
 
@@ -242,7 +195,13 @@ else grounded = false;
 //spike damage
 if(place_meeting(x + image_xscale,y,obj_spikes) && (hsp >= 3 || hsp <= -3))
 {
-	health -= 1;
+	health -= 5;
 	hsp -= image_xscale * 5;
 }
 
+//vertical spike damage
+if(place_meeting(x,y + vsp,obj_spikes_up) && (vsp >= 3 || vsp <= -3))
+{
+	health = 0;;
+	vsp -= image_xscale * 5;
+}

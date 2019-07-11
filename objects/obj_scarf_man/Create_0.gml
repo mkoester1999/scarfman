@@ -36,3 +36,12 @@ side = 0;
 deccel = 1;
 deccelAmount = 2;
 damage = 1;
+MAX_GRAV = 10;
+
+//enumetator for player state
+enum p_state
+{
+	normal,
+	grapple
+}
+player_state = p_state.normal;

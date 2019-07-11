@@ -2,7 +2,7 @@
 // You can write your code in this editor
 draw_set_color(c_red);
 
-if(instance_exists(obj_scarf_man.point) && obj_scarf_man.grapple = true)
+if(instance_exists(obj_scarf_man.point) && obj_scarf_man.player_state = p_state.grapple)
 {
 	draw_line_width(obj_scarf_man.x + sign(image_xscale),obj_scarf_man.y - 3,obj_scarf_man.point.x,obj_scarf_man.point.y,1);
 }

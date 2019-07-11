@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "0703d040-31d2-45c2-bc38-520a97d67f77",
+            "Value": {
+                "id": "785954a5-c381-42d2-bc43-3fbc4b0d9a88",
+                "resourcePath": "objects\\obj_spikes_up\\obj_spikes_up.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "0829c21a-8bab-4110-9f12-0e6aa8471d05",
             "Value": {
                 "id": "e38349c0-112b-41db-b2e6-42d13146d9a3",
@@ -255,6 +263,14 @@
             }
         },
         {
+            "Key": "533b10d1-6fb9-4ee0-9ede-11cd4d70ecf1",
+            "Value": {
+                "id": "2bff7d1e-1ccf-48a5-bd4c-d9afa4637b28",
+                "resourcePath": "scripts\\scarfNormal\\scarfNormal.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "5758e225-4508-4047-8982-e891b0efe685",
             "Value": {
                 "id": "a21fc140-8c6d-4078-9f36-3a2f880141d9",
@@ -315,6 +331,14 @@
             "Value": {
                 "id": "08f43be3-bb76-4abf-b6d6-8f91c20301ac",
                 "resourcePath": "sprites\\spr_demon\\spr_demon.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "65adb406-d6ea-4807-ac75-c27ebc4c37f4",
+            "Value": {
+                "id": "be554c4e-54ac-40ee-a78b-ebe7ab51c506",
+                "resourcePath": "sprites\\spr_spikes_up\\spr_spikes_up.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -567,6 +591,14 @@
             }
         },
         {
+            "Key": "b93b00e8-5782-4a56-a743-ef1817331048",
+            "Value": {
+                "id": "e2479835-872a-49d5-9ffa-902e972d5694",
+                "resourcePath": "rooms\\rm_hell3\\rm_hell3.yy",
+                "resourceType": "GMRoom"
+            }
+        },
+        {
             "Key": "ba607dd5-3dc5-41f1-af73-bca175586032",
             "Value": {
                 "id": "da0ab260-a4ce-47c1-aab2-861493216e0b",
@@ -778,6 +810,7 @@
     "script_order": [
         "9231791d-de9b-49a2-bae2-a2dbd293b70f",
         "28fceaba-9ffc-4771-8c76-421390da698b",
+        "533b10d1-6fb9-4ee0-9ede-11cd4d70ecf1",
         "c46e28aa-a4b2-4000-b61c-0a5e2e2ddddd",
         "a3f4482e-51b1-4daa-9105-ec830e6074b6",
         "10385753-f733-40fb-bc59-188ffcca4237",
