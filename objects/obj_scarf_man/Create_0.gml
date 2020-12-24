@@ -42,6 +42,8 @@ MAX_GRAV = 10;
 enum p_state
 {
 	normal,
-	grapple
+	slide,
+	grapple,
+	walljump
 }
 player_state = p_state.normal;
